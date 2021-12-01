@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(#3f3f3f,#252425 );
+}
+
+header {
+    height: 10vh;
+    line-height: 10vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: blanchedalmond;
+    box-shadow: 4px 5px 10px 0 rgba(0, 0, 0, .2);
+    background-image: linear-gradient(#505050,#202020 );
+    z-index: 3;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    margin-top: 15vh;
+    text-transform: uppercase;
+}
+
+.calender {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sep-calender {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #252425;
+    color: aliceblue;
+    margin-bottom: 2rem;
+    box-shadow: 4px 5px 10px 0 rgba(0, 0, 0, .2), -9px -13px 11px 2px rgb(146, 0, 134);
+}
+
+.sep-calender h1 {
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .01rem;
+    list-style: none;
+}
+
+li {
+    padding: 3px;
+    text-align: center;
+}
+
+li:hover{
+    background-color:#ab00b1;
+}
+
+.prev-month,
+.prev-month~li {
+    opacity: .5;
+}
+
+.first-day,
+.first-day~li {
+    opacity: 1 !important;
+    font-weight: 900;
+}
+
+.last-day~li {
+    opacity: .5 !important;
+    font-weight: 200 !important;
+}
+
+li:nth-child(7n + 1) {
+    color: #db3725;
+}
+
+li:nth-child(7n - 1) {
+    color: #04f84e;
+}
